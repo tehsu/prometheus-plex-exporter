@@ -29,6 +29,6 @@ jobs:
     - name: Build and publish
       run: |
           make docker-images
-          docker push ghcr.io/{{ EVENT_PAYLOAD.repository.full_name }}:latest
+          docker push ghcr.io/tehsu/prometheus-plex-exporter:latest
       
       
