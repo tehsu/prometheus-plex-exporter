@@ -31,9 +31,9 @@ exe:
 
 .PHONY: docker-component # Not intended to be used directly
 docker-component: check-component exe
-	docker build -t jsclayton/$(COMPONENT) --build-arg=TARGETARCH=$(GOARCH) -f ./cmd/$(COMPONENT)/Dockerfile .
-	docker tag jsclayton/$(COMPONENT) $(COMPONENT)
-	docker tag jsclayton/$(COMPONENT) ghcr.io/jsclayton/$(COMPONENT)
+	docker build -t tehsu/$(COMPONENT) --build-arg=TARGETARCH=$(GOARCH) -f ./cmd/$(COMPONENT)/Dockerfile .
+	docker tag tehsu/$(COMPONENT) $(COMPONENT)
+	docker tag tehsu/$(COMPONENT) ghcr.io/tehsu/$(COMPONENT)
 
 .PHONY: docker-prometheus-plex-exporter
 docker-prometheus-plex-exporter:
